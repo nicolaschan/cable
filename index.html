@@ -46,7 +46,9 @@
       <script>
         $(function() {
           setInterval(function() {
-            $('#loading').css('border-left',(parseInt($('#loading').css('border-left').split('p')[0]) + 1) + 'px solid black');
+            if (parseInt($('#loading').css('border-left').split('p')[0]) < 500) {
+              $('#loading').css('border-left',(parseInt($('#loading').css('border-left').split('p')[0]) + 1) + 'px solid black');
+            }
           }, 10);
         });
       </script>
