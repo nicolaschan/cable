@@ -48,6 +48,8 @@
           setInterval(function() {
             if (parseInt($('#loading').css('border-left').split('p')[0]) < 495) {
               $('#loading').css('border-left',(parseInt($('#loading').css('border-left').split('p')[0]) + 1) + 'px solid black');
+            } else {
+              $('#loading').css('visibility','hidden');
             }
           }, 10);
         });
