@@ -46,9 +46,8 @@
       <script>
         $(function() {
           setInterval(function() {
-            console.log($('#loading').css('border-left'));
-            $('#loading').css('border-left','100px solid black');
-          }, 1000);
+            $('#loading').css('border-left',(parseInt($('#loading').css('border-left').split('p')[0]) + 1) + 'px solid black');
+          }, 10);
         });
       </script>
       <span id="loading-container">
