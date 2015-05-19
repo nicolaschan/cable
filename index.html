@@ -45,7 +45,10 @@
     <span id="loading">
       <script>
         $(function() {
-          $('#loading').css('border-left','100px solid black');
+          setInterval(function() {
+            console.log($('#loading').css('border-left'));
+            $('#loading').css('border-left','100px solid black');
+          }, 1000);
         });
       </script>
       <span id="loading-container">
