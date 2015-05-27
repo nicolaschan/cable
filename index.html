@@ -42,6 +42,8 @@
             top: 60vh;
             z-index: 105;
             visibility: hidden;
+            opacity: 0;
+            transition: opacity 2s;
         }
     </style>
 </head>
@@ -61,7 +63,7 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>We have a problem here in America.</h3>
 
         <p>
-            The United States lags behind other developed countries when it comes to Internet service and costs. Many people in the United States are suffering from poor Internet service causing inconvienineces like slow loading times.
+            The United States lags behind other developed countries when it comes to Internet service and costs. Many people in the United States are suffering from poor Internet service causing inconvienineces like slow loading times and higher prices.
             <br>
             <a href="problem.html">Explore the problem &#8594;</a>
         </p>
@@ -72,7 +74,7 @@
         </footer>
     </section>
     <span id="loading-wrapper">
-    <span id="loading-message">Poor Internet service from lack of competition?</span>
+    <span id="loading-message">Poor Internet service?</span>
     <span id="loading">
       <script>
         $(function() {
@@ -81,6 +83,7 @@
               $('#loading').css('border-left',(parseInt($('#loading').css('border-left').split('p')[0]) + 1) + 'px solid black');
                 if (parseInt($('#loading').css('border-left').split('p')[0]) > 300) {
                     $('#loading-message2').css('visibility','visible');
+                    $('#loading-message2').css('opacity','1');
                 }
             } else {
               $('#loading-wrapper').css('visibility','hidden');
